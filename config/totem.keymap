@@ -73,10 +73,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp PAGE_UP    &kp LS(LG(LBKT))  &kp UP      &kp LS(LG(RBKT))  &kp C_VOLUME_UP    &kp C_BRI_UP  &trans    &trans      &trans  &kp LC(LS(LG(NUMBER_4)))
-           &kp HOME       &kp LEFT          &kp DOWN    &kp RIGHT         &kp C_MUTE         &kp C_PREV    &kp C_PP  &kp C_NEXT  &trans  &trans
-&kp GLOBE  &kp PAGE_DOWN  &kp LG(LBKT)      &caps_word  &kp LG(RBKT)      &kp C_VOL_DN       &kp C_BRI_DN  &trans    &trans      &trans  &trans                    &trans
-                                            &trans      &trans            &trans             &trans        &trans    &trans
+                                      &kp PAGE_UP    &kp LS(LG(LBKT))  &kp UP    &kp LS(LG(RBKT))  &kp C_VOLUME_UP    &kp C_BRI_UP       &trans    &trans      &trans  &kp LC(LS(LG(NUMBER_4)))
+                                      &kp HOME       &kp LEFT          &kp DOWN  &kp RIGHT         &kp C_MUTE         &kp C_PREV         &kp C_PP  &kp C_NEXT  &trans  &trans
+&kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &kp PAGE_DOWN  &kp LG(LBKT)      &sk CAPS  &kp LG(RBKT)      &kp C_VOL_DN       &kp C_BRI_DN       &trans    &trans      &trans  &trans                    &kp F6
+                                                                       &trans    &trans            &trans             &kp LA(BACKSPACE)  &trans    &trans
             >;
         };
 
