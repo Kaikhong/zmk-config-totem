@@ -16,6 +16,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
 #define NAV  1
@@ -49,10 +50,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                    &kp Q  &kp W  &kp E     &kp R         &kp T            &kp Y      &kp U        &kp I         &kp O    &kp P
-                    &kp A  &kp S  &kp D     &kp F         &kp G            &kp H      &kp J        &kp K         &kp L    &kp SQT
-&mt LEFT_SHIFT TAB  &kp Z  &kp X  &kp C     &kp V         &kp B            &kp N      &kp M        &kp COMMA     &kp DOT  &sk LEFT_SHIFT  &mt LEFT_CONTROL C_MUTE
-                                  &kp LGUI  &lt 1 ESCAPE  &kp BACKSPACE    &kp SPACE  &lt 2 ENTER  &kp LEFT_ALT
+                    &kp Q  &kp W  &kp E     &kp R         &kp T              &kp Y      &kp U        &kp I         &kp O    &kp P
+                    &kp A  &kp S  &kp D     &kp F         &kp G              &kp H      &kp J        &kp K         &kp L    &kp SQT
+&mt LEFT_SHIFT TAB  &kp Z  &kp X  &kp C     &kp V         &kp B              &kp N      &kp M        &kp COMMA     &kp DOT  &sk LEFT_SHIFT  &mt LEFT_CONTROL C_MUTE
+                                  &kp LGUI  &lt 1 ESCAPE  &lt 4 BACKSPACE    &kp SPACE  &lt 2 ENTER  &kp LEFT_ALT
             >;
         };
 
@@ -75,10 +76,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp PAGE_UP    &kp LS(LG(LBKT))  &kp UP            &kp LS(LG(RBKT))  &kp C_VOLUME_UP    &kp C_BRI_UP  &trans          &mmv MOVE_UP    &trans           &kp LC(LS(LG(NUMBER_4)))
-           &kp HOME       &kp LEFT          &kp DOWN          &kp RIGHT         &kp C_MUTE         &trans        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
-&kp GRAVE  &kp PAGE_DOWN  &kp LG(LBKT)      &sk CAPS          &kp LG(RBKT)      &kp C_VOL_DN       &kp C_BRI_DN  &trans          &trans          &trans           &trans                    &kp F6
-                                            &kp LEFT_COMMAND  &trans            &kp SPACE          &mkp MB1      &trans          &mkp MB2
+               &kp PAGE_UP    &kp LS(LG(LBKT))  &kp UP            &kp LS(LG(RBKT))  &kp C_VOLUME_UP    &kp C_BRI_UP  &trans          &mmv MOVE_UP    &trans           &kp LC(LS(LG(NUMBER_4)))
+               &kp HOME       &kp LEFT          &kp DOWN          &kp RIGHT         &kp C_MUTE         &trans        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
+&kp LG(GRAVE)  &kp PAGE_DOWN  &kp LG(LBKT)      &sk CAPS          &kp LG(RBKT)      &kp C_VOL_DN       &kp C_BRI_DN  &trans          &trans          &trans           &trans                    &kp F6
+                                                &kp LEFT_COMMAND  &trans            &kp SPACE          &mkp MB3      &mkp MB1        &mkp MB2
             >;
         };
 
@@ -101,10 +102,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp RIGHT_BRACKET  &kp PERCENT  &kp AT      &kp RIGHT_PARENTHESIS  &kp QUESTION         &kp MINUS  &kp N7        &kp N8        &kp N9        &kp ASTERISK
-        &kp LEFT_BRACKET   &kp SEMI     &kp COLON   &kp LEFT_PARENTHESIS   &kp AMPS             &kp N0     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL
-&trans  &kp HASH           &kp GRAVE    &kp DOLLAR  &kp UNDER              &kp EXCLAMATION      &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH     &trans
-                                        &trans      &trans                 &kp LA(BACKSPACE)    &trans     &trans        &trans
+        &kp RIGHT_BRACKET  &kp PERCENT  &kp AT      &kp RIGHT_PARENTHESIS  &kp QUESTION       &kp MINUS  &kp N7        &kp N8        &kp N9        &kp ASTERISK
+        &kp LEFT_BRACKET   &kp SEMI     &kp COLON   &kp LEFT_PARENTHESIS   &kp AMPS           &kp N0     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL
+&trans  &kp HASH           &kp GRAVE    &kp DOLLAR  &kp UNDER              &kp EXCLAMATION    &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH     &trans
+                                        &trans      &trans                 &trans             &trans     &trans        &trans
             >;
         };
 
@@ -131,6 +132,15 @@
         &trans           &bt BT_NXT  &trans        &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
 &trans  &kp LC(PAGE_UP)  &bt BT_PRV  &trans        &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
                                      &trans        &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+        &trans  &trans          &mmv MOVE_UP     &msc SCRL_UP     &trans      &trans  &trans  &trans  &trans  &trans
+        &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &mkp MB1    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &msc SCRL_LEFT  &msc SCRL_RIGHT  &msc SCRL_DOWN   &mkp MB2    &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans           &trans           &trans      &trans  &trans  &trans
             >;
         };
 
